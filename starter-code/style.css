@@ -9,6 +9,7 @@ body{
 .hero{
     text-align: center;
     padding: 1rem;
+   
     
 }
 .hero-img{
@@ -23,9 +24,15 @@ body{
    max-width:180px ;
    height: auto;
 }
-.header-p-text{
+
+.p{
     color: rgb(153, 149, 149);
     padding: 1.2rem 0rem;
+}
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .hero-buttons{
     display: flex;
@@ -57,4 +64,66 @@ body{
 button:hover{
     transform: translateY(-2px);
     transition: all ease-in;
+}
+.step{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem 0;
+}
+.step-line{
+    background-color:  #e4e3e3;
+    width: 1px;
+    height: 80px;
+}
+.step-circle{
+    border:1px solid #cccbcb;
+    padding: 1rem;
+    border-radius: 50%;
+    color: rgb(106, 105, 105);
+}
+.features-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    
+}
+.features-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.features-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.blue{
+    color:#3091ac;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+footer{
+    position: relative;
+    background-image: url(/starter-code/assets/mobile/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1.5rem;
+    color: white;
+    text-align: center;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(48, 145, 172, 0.85);
+}
+footer * {
+  position: relative;
 }
