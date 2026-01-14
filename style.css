@@ -174,14 +174,16 @@ footer h1,p,button{
     .hero-img img:first-child {
         grid-area: avatar-one;
         width: 100%;
-        max-width: 400px;
+        max-width: 450px;
+        margin-bottom: 5rem;
     }
 
     /* Right image */
     .hero-img img:last-child {
         grid-area: avatar-two;
         width: 100%;
-        max-width: 400px;
+        max-width: 450px;
+        margin-top: 2rem;
     }
 
     /* Content */
