@@ -26,7 +26,7 @@ body{
 }
 
 .p{
-    color: rgb(153, 149, 149);
+    color: rgb(232, 226, 226);
     padding: 1.2rem 0rem;
 }
 .hero-content{
@@ -151,6 +151,66 @@ footer h1,p,button{
         gap: 1rem;
     }
 }
-@media (min-width: 1024px){
-    
+@media (min-width: 1024px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; /* left img | content | right img */
+        grid-template-areas: "avatar-one middle-content avatar-two";
+        align-items: center;
+        padding: 4rem 2rem;
+        text-align: center;
+        gap: 2rem;
+        overflow: hidden;
+        position: relative;
+        margin-top: 5rem;
+    }
+
+    /* Remove flex on hero-img to let grid work */
+    .hero-img {
+        display: contents; /* allows the images to participate in grid */
+    }
+
+    /* Left image */
+    .hero-img img:first-child {
+        grid-area: avatar-one;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Right image */
+    .hero-img img:last-child {
+        grid-area: avatar-two;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Content */
+    .hero-content {
+        grid-area: middle-content;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    /* Buttons row */
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+    }
+    h1{
+        font-size: 60px;
+    }
+    p{
+        color: rgb(138, 135, 135);
+    }
+    .logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0.5rem;
+         z-index: 10; 
+      
+    }
 }
